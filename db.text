@@ -1,0 +1,19 @@
+CREATE(f:Filme{name:'Avatar',ano_lanc:'2009',diretor:'James Cameron',genero:'Aventura'});
+CREATE(f:Filme{name:'Velozes e Furiosos 5',ano_lanc:'2011',diretor:'Justin Lin',genero:'Ação'});
+CREATE(f:Filme{name:'Bastardos Inglórios',ano_lanc:'2009',diretor:'Quentin Tarantino',genero:'Drama'});
+CREATE(f:Filme{name:'Crepusculo',ano_lanc:'2008',diretor:'Catherine Hardwicke',genero:'Drama'});
+CREATE(f:Filme{name:'Vovózona',ano_lanc:'2000',diretor:'Raja Gosnell',genero:'Comédia'});
+CREATE(f:Filme{name:'As Branquelas',ano_lanc:'2004',diretor:'Keenen Ivory Wayans',genero:'Comédia'});
+CREATE(f:Filme{name:'Jurassic Park',ano_lanc:'1993',diretor:'Steven Spielberg',genero:'Ação'});
+CREATE(f:Filme{name:'Titanic',ano_lanc:'1997',diretor:'James Cameron',genero:'Romance'});
+CREATE(f:Filme{name:'Matrix',ano_lanc:'1999',diretor:'Lana Wachowski',genero:'Ação'});
+CREATE(f:Filme{name:'O Senhor dos Anéis: A Sociedade do Anel',ano_lanc:'2001',diretor:'Peter Jackson',genero:'Fantasia'});
+CREATE(f:Filme{name:'Interestelar',ano_lanc:'2014',diretor:'Christopher Nolan',genero:'Ficção Científica'});
+CREATE(f:Filme{name:'Pulp Fiction',ano_lanc:'1994',diretor:'Quentin Tarantino',genero:'Crime'});
+
+
+CREATE(p:Pessoa{name:'Leonardo',idade:'20',sexo:'masculino'});
+CREATE(p:Pessoa{name:'João',idade:'22',sexo:'masculino'});
+
+MATCH (a:Pessoa{name:'Leonardo'}),(b:Filme{name:'Avatar'}) CREATE(a)-[:AVALIOU{nota:'10',comentario:'Filme muito bom'}]->(b);
+MATCH (a:Pessoa{name:'João'}),(b:Filme{name:'Crepusculo'}) CREATE(a)-[:AVALIOU{nota:'3',comentario:'Filme horrivel'}]->(b)
