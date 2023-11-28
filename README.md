@@ -1,4 +1,4 @@
-# MovieMaker App
+# MovieAvaliation App
 
 O MovieAvaliation é uma aplicação inovadora que permite aos usuários adicionar filmes e receber avaliações de outras pessoas.
 
